@@ -10,11 +10,9 @@ class PageController extends Controller
 {
     public function getIndex(){
         $slide = Slide::all();
-        $new_product = Product::where('new',1)->get(); //lấy tất cả sản phẩm có giá trị new bằng 1
-        // return view('page.trangchu',['slide' => $silde]);
-        
-        // dd($new_product);
-        return view('page.trangchu',compact('slide','new_product')); //--> truyền biến qua bên view
+        $new_product = Product::where('new',1)->paginate(4); //lấy tất cả sản phẩm có giá trị new bằng 1 và phân trang
+        $sanpham_khuyenmai = Product::where('promotion_price','<>',0)->paginate(8);
+        return view('page.trangchu',compact('slide','new_product','sanpham_khuyenmai')); //--> truyền biến qua bên view
 
     }
 
