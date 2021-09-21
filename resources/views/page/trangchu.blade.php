@@ -54,10 +54,10 @@
                                                 <p class="single-item-title">{{$new -> name}}</p>
                                                 <p class="single-item-price">
                                                 @if($new ->promotion_price == 0)
-                                                     <span class="flash-sale">{{$new->unit_price}}</span>
+                                                     <span class="flash-sale">{{number_format($new->unit_price)}}đ</span>
                                                 @else
-                                                <span class="flash-del">{{$new->unit_price}}</span>
-												<span class="flash-sale">{{$new ->promotion_price}}</span>
+                                                <span class="flash-del">{{number_format($new->unit_price)}}đ</span>
+												<span class="flash-sale">{{number_format($new->promotion_price)}}đ</span>
                                                 @endif()
                                                 </p>
                                             </div>
@@ -82,15 +82,21 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="row">
+                                    @foreach($sanpham_khuyenmai as $spkm)
                                     <div class="col-sm-3">
                                         <div class="single-item">
+                                             @if($new ->promotion_price != 0)
+                                            	<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
+                                        </div>
+                                        @endif() 
                                             <div class="single-item-header">
-                                                <a href="product.html"><img src="source/assets/dest/images/products/1.jpg" alt=""></a>
+                                                <a href="product.html"><img src="source/image/product/{{$spkm -> image}}" height="250px" alt=""></a>
                                             </div>
                                             <div class="single-item-body">
-                                                <p class="single-item-title">Sample Woman Top</p>
+                                                <p class="single-item-title">{{$spkm -> name}}</p>
                                                 <p class="single-item-price">
-                                                    <span>$34.55</span>
+                                                <span class="flash-del">{{number_format($spkm->unit_price)}}đ</span>
+												<span class="flash-sale">{{number_format($spkm->promotion_price)}}đ</span>
                                                 </p>
                                             </div>
                                             <div class="single-item-caption">
@@ -100,6 +106,8 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
+                                    <div class="row">{{$sanpham_khuyenmai -> links()}}</div>
                                 </div>
                                
                             </div> <!-- .beta-products-list -->
