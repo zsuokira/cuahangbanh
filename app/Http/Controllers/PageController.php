@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Slide;
 use App\Product;
-
+use App\ProductType;
 class PageController extends Controller
 {
     public function getIndex(){
@@ -16,12 +16,18 @@ class PageController extends Controller
 
     }
 
-    public function getLoaiSp(){
-        return view('page.loai_sanpham');
+    public function getLoaiSp($type){
+        $sp_theoloai = Product::where('id_type',$type)-> get();
+        $sp_khac =  Product::where('id_type','<>',$type) -> paginate(3);
+        $loai = ProductType :: all();
+        $loai_sp = ProductType :: where('id',$type)-> first();
+        return view('page.loai_sanpham',compact('sp_theoloai','sp_khac','loai','loai_sp'));
     }
 
-     public function getChitiet(){
-        return view('page.chitiet_sanpham');
+     public function getChitiet(Request $req){
+         $sanpham = Product :: where('id',$req -> id) ->first();
+         $sp_tuongtu = Product :: where ('id_type',$sanpham -> id_type)-> paginate(3);
+        return view('page.chitiet_sanpham',compact('sanpham','sp_tuongtu'));
     }
 
      public function getLienHe(){
