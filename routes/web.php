@@ -47,3 +47,7 @@ Route::get('add-to-cart/{id}',[
     'uses'=>'PageController@getAddtoCart'
 ]);
 
+Route::get('del-cart/{id}',[
+    'as' =>'xoagiohang',
+    'uses'=>'PageController@getDelItemCart'
+]);

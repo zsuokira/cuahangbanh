@@ -46,7 +46,7 @@
 										<div class="media-body">
 											<span class="cart-item-title">{{$product['item']['name']}}</span>
 											
-											<span class="cart-item-amount">{{$product['qty']}}*<span>{{number_format($product['item']['unit_price'])}}</span>
+											<span class="cart-item-amount">{{$product['qty']}}*<span>@if($product['item']['promotion_price']==0){{number_format($product['item']['unit_price'])}} @else {{number_format($product['item']['promotion_price'])}}@endif</span>
 										</div>
 									</div>
 								</div>
@@ -54,7 +54,7 @@
 								
 
 								<div class="cart-caption">
-									<div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">{{number_format(Session('cart')->totalPrice)}} đồng</span></div>
+									<div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">@if($product['item']['promotion_price']==0){{number_format($product['item']['unit_price'])}} @else {{number_format($product['item']['promotion_price'])}}@endif đồng</span></div>
 									<div class="clearfix"></div>
 
 									<div class="center">
