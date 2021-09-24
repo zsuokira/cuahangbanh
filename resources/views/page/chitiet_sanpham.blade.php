@@ -4,11 +4,11 @@
 <div class="inner-header">
 		<div class="container">
 			<div class="pull-left">
-				<h6 class="inner-title">{{$sanpham -> name}}</h6>
+				<h6 class="inner-title">Sản phẩm {{$sanpham -> name}}</h6>
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb font-large">
-					<a href="{{route('trang-chu')}}">Trang chủ</a> / <span>Product</span>
+					<a href="{{route('trang-chu')}}">Trang chủ</a> / <span>Thông tin chi tiết</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
