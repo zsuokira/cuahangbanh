@@ -40,12 +40,13 @@
 								
 								@foreach($product_cart as $product)
 								<div class="cart-item">
+									<a class="cart-item-delete" href="{{route('xoagiohang',$product['item']['id'])}}"><i class="fa fa-times"></i></a>
 									<div class="media">
 										<a class="pull-left" href="#"><img src="source/image/product/{{$product['item']['image']}}" alt=""></a>
 										<div class="media-body">
 											<span class="cart-item-title">{{$product['item']['name']}}</span>
 											
-											<span class="cart-item-amount">{{$product['qty']}}<span>{{$product['item']['unit_price']}}</span>
+											<span class="cart-item-amount">{{$product['qty']}}*<span>{{number_format($product['item']['unit_price'])}}</span>
 										</div>
 									</div>
 								</div>
@@ -53,7 +54,7 @@
 								
 
 								<div class="cart-caption">
-									<div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">{{Session('cart')->totalPrice}}</span></div>
+									<div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">{{number_format(Session('cart')->totalPrice)}} đồng</span></div>
 									<div class="clearfix"></div>
 
 									<div class="center">
