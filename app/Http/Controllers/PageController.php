@@ -46,6 +46,6 @@ class PageController extends Controller
         $cart = new Cart($oldCart);
         $cart ->add($product, $id);
         $req->session()->put('cart',$cart);
-        return readirect()->back();
+        return redirect()->back();
     }
 }
