@@ -64,15 +64,21 @@ class PageController extends Controller
         }
         return redirect()->back();
     }
+    
+    public function getCheckout(){
+        return view('page.dat_hang');
+    }
+
+
 
     public function postCheckout(Request $req){
         $cart = Session::get('cart');
-        
+
         $customer = new Customer;
         $customer->name = $req->name;
         $customer->gender = $req->gender;
         $customer->email = $req->email;
-        $customer->address = $rep->address;
+        $customer->address = $req->address;
         $customer->phone_number = $req->phone;
         $customer->note = $req->notes;
         $customer->save();
@@ -85,15 +91,17 @@ class PageController extends Controller
         $bill->note = $req->notes;
         $bill->save();
 
-        foreach ($cart['item'] as $key => $value) {
+        foreach ($cart->items as $key => $value) {
             $bill_detail = new BillDetail;
             $bill_detail->id_bill = $bill->id;
             $bill_detail->id_product = $key;
-            $bill_detail->quatity = $value['qty'];
+            $bill_detail->quantity = $value['qty'];
             $bill_detail->unit_price = ($value['price']/$value['qty']);
             $bill_detail->save();
         }
-        Sesion::forget('cart');
-        return redirect()->back()->with('thongbao','Đặt hàng thành công!!');
+        Session::forget('cart');
+        return redirect()->back()->with('thongbao','Đặt hàng thành công');
+
     }
+
 }
