@@ -7,7 +7,7 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb">
-					<a href="index.html">Home</a> / <span>Đăng nhập</span>
+					<a href="{{route('trang-chu')}}">Home</a> / <span>Đăng nhập</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -22,7 +22,7 @@
 				<div class="row">
 					<div class="col-sm-3"></div>
 					@if(Session::has('flag'))
-					<div class="alert alert-{{Session::get('flag')}}">
+					<div class="alert alert-{{Session::get('flag')}}" >
 					{{Session::get('message')}}	</div>
 					@endif
 					<div class="col-sm-6">

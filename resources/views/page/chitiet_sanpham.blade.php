@@ -43,16 +43,9 @@
 						
 							<div class="space20">&nbsp;</div>
 
-							<p>Số lượng:</p>
+							<p>Đặt mua:</p>
 							<div class="single-item-options">
-								<select class="wc-select" name="color">
-									<option>Chọn</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
+								
 								<a class="add-to-cart" href="{{route('themgiohang',$sanpham -> id)}}"><i class="fa fa-shopping-cart"></i></a>
 								<div class="clearfix"></div>
 							</div>
@@ -98,8 +91,8 @@
 										</p>
 									</div>
 									<div class="single-item-caption">
-										<a class="add-to-cart pull-left" href="product.html"><i class="fa fa-shopping-cart"></i></a>
-										<a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+										<a class="add-to-cart pull-left" href="{{route('themgiohang',$sptt -> id)}}"><i class="fa fa-shopping-cart"></i></a>
+										<a class="beta-btn primary" href="{{route('chitietsanpham',$sptt -> id)}}">Details <i class="fa fa-chevron-right"></i></a>
 										<div class="clearfix"></div>
 									</div>
 								</div>
@@ -109,78 +102,7 @@
 						<div class = "row">{{$sp_tuongtu -> links()}}</div>
 					</div> <!-- .beta-products-list -->
 				</div>
-				<div class="col-sm-3 aside">
-					<div class="widget">
-						<h3 class="widget-title">Best Sellers</h3>
-						<div class="widget-body">
-							<div class="beta-sales beta-lists">
-								<div class="media beta-sales-item">
-									<a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/1.png" alt=""></a>
-									<div class="media-body">
-										Sample Woman Top
-										<span class="beta-sales-price">$34.55</span>
-									</div>
-								</div>
-								<div class="media beta-sales-item">
-									<a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/2.png" alt=""></a>
-									<div class="media-body">
-										Sample Woman Top
-										<span class="beta-sales-price">$34.55</span>
-									</div>
-								</div>
-								<div class="media beta-sales-item">
-									<a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/3.png" alt=""></a>
-									<div class="media-body">
-										Sample Woman Top
-										<span class="beta-sales-price">$34.55</span>
-									</div>
-								</div>
-								<div class="media beta-sales-item">
-									<a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/4.png" alt=""></a>
-									<div class="media-body">
-										Sample Woman Top
-										<span class="beta-sales-price">$34.55</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> <!-- best sellers widget -->
-					<div class="widget">
-						<h3 class="widget-title">New Products</h3>
-						<div class="widget-body">
-							<div class="beta-sales beta-lists">
-								<div class="media beta-sales-item">
-									<a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/1.png" alt=""></a>
-									<div class="media-body">
-										Sample Woman Top
-										<span class="beta-sales-price">$34.55</span>
-									</div>
-								</div>
-								<div class="media beta-sales-item">
-									<a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/2.png" alt=""></a>
-									<div class="media-body">
-										Sample Woman Top
-										<span class="beta-sales-price">$34.55</span>
-									</div>
-								</div>
-								<div class="media beta-sales-item">
-									<a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/3.png" alt=""></a>
-									<div class="media-body">
-										Sample Woman Top
-										<span class="beta-sales-price">$34.55</span>
-									</div>
-								</div>
-								<div class="media beta-sales-item">
-									<a class="pull-left" href="product.html"><img src="source/assets/dest/images/products/sales/4.png" alt=""></a>
-									<div class="media-body">
-										Sample Woman Top
-										<span class="beta-sales-price">$34.55</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> <!-- best sellers widget -->
-				</div>
+				
 			</div>
 		</div> <!-- #content -->
 	</div> <!-- .container -->

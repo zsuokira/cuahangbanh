@@ -85,12 +85,12 @@
                                     @foreach($sanpham_khuyenmai as $spkm)
                                     <div class="col-sm-3">
                                         <div class="single-item">
-                                             @if($new ->promotion_price != 0)
+                                             @if($spkm ->promotion_price != 0)
                                             	<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
                                         </div>
                                         @endif() 
                                             <div class="single-item-header">
-                                                <a href="{{route('chitietsanpham',$new -> id)}}"><img src="source/image/product/{{$spkm -> image}}" height="250px" alt=""></a>
+                                                <a href="{{route('chitietsanpham',$spkm -> id)}}"><img src="source/image/product/{{$spkm -> image}}" height="250px" alt=""></a>
                                             </div>
                                             <div class="single-item-body">
                                                 <p class="single-item-title">{{$spkm -> name}}</p>
