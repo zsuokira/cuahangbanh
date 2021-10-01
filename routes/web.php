@@ -79,7 +79,7 @@ Route ::post('dang-ki',[
 ]);
 Route ::get('dang-xuat',[
     'as'=>'logout',
-    'uses'=>'PageController@getLogout'
+    'uses'=>'PageController@postLogout'
 ]);
 
 Route ::get('search',[
