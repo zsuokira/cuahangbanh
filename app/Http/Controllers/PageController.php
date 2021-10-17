@@ -76,7 +76,6 @@ class PageController extends Controller
 
     public function postCheckout(Request $req){
         $cart = Session::get('cart');
-
         $customer = new Customer;
         $customer->name = $req->name;
         $customer->gender = $req->gender;
@@ -163,7 +162,7 @@ class PageController extends Controller
     }
     public function postLogout(){
         Auth::logout();
-        return redirect()->route('trang-chu');
+         return redirect()->route('trang-chu');
     }
 
     public function getSearch(Request $req){
