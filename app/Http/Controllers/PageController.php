@@ -120,6 +120,8 @@ class PageController extends Controller
                 'email'=>'required|email|unique:users,email',
                 'password'=>'required|min:4',
                 'fullname'=>'required',
+                'adress'=>'required',
+                'phone'=>'required',
                 're_password'=>'required|same:password'
             ],
             [

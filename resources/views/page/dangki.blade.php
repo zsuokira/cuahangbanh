@@ -32,36 +32,36 @@
                     <div class="alert alert-success">{{Session::get('thanhcong')}}</div>
                     @endif
 					<div class="col-sm-6">
-						<h4>Đăng kí</h4>
+					
 						<div class="space20">&nbsp;</div>
 
 						
 						<div class="form-block">
-							<label for="email">Email address*</label>
+							<label for="email">Email</label>
 							<input type="email" name="email" required>
 						</div>
 
 						<div class="form-block">
-							<label for="your_last_name">Fullname*</label>
+							<label for="your_last_name">Họ tên đầy đủ</label>
 							<input type="text" name="fullname" required>
 						</div>
 
 						<div class="form-block">
-							<label for="adress">Address*</label>
-							<input type="text" name="adress" value="Street Address" required>
+							<label for="adress">Địa chỉ</label>
+							<input type="text" name="adress" required>
 						</div>
 
 
 						<div class="form-block">
-							<label for="phone">Phone*</label>
+							<label for="phone">Số điện thoại</label>
 							<input type="text" name="phone" required>
 						</div>
 						<div class="form-block">
-							<label for="password">Password*</label>
+							<label for="password">Mật khẩu</label>
 							<input type="password" name="password" required>
 						</div>
 						<div class="form-block">
-							<label for="password">Re password*</label>
+							<label for="password">Nhập lại mật khẩu</label>
 							<input type="password" name="re_password" required>
 						</div>
 						<div class="form-block">
