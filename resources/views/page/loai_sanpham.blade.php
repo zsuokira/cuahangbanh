@@ -40,7 +40,7 @@
 									@if($sp ->promotion_price != 0)
                                             	<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
                                         </div>
-                                        @endif();
+                                        @endif()
 										<div class="single-item-header">
 											<a href="{{route('chitietsanpham',$sp -> id)}}"><img src="source/image/product/{{$sp -> image}}" alt="" height="250px"></a>
 										</div>
@@ -81,7 +81,7 @@
 									@if($spk ->promotion_price != 0)
                                             	<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
                                         </div>
-                                        @endif();
+                                        @endif()
 										<div class="single-item-header">
 											<a href="{{route('chitietsanpham',$spk -> id)}}"><img src="source/image/product/{{$spk -> image}}" alt="" height="250px"></a>
 										</div>

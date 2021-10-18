@@ -1,4 +1,3 @@
-
 	<div id="header">
 		<div class="header-top">
 			<div class="container">
@@ -28,7 +27,7 @@
 					<a href="{{route('trang-chu')}}" id="logo"><img src="source/assets/dest/images/logo-cake - Copy.png" width="200px" alt=""></a>
 				</div>
 				<div class="pull-right beta-components space-left ov">
-					<div class="space10">&nbsp;</div>
+					<div class="space10">&nbsp</div>
 					<div class="beta-comp">
 						<form role="search" method="get" id="searchform" action="{{route('search')}}">
 					        <input type="text" value="" name="key" id="s" placeholder="Nhập từ khóa..." />
@@ -62,7 +61,7 @@
 									<div class="clearfix"></div>
 
 									<div class="center">
-										<div class="space10">&nbsp;</div>
+										<div class="space10">&nbsp</div>
 										<a href="{{route('dathang')}}" class="beta-btn primary text-center">Đặt hàng <i class="fa fa-chevron-right"></i></a>
 									</div>
 								</div>
