@@ -107,3 +107,8 @@ Route ::get('all-type-product',[
     'as'=>'all-type-product',
     'uses'=>'TypeProduct@all_type_product'
 ]);
+
+Route ::post('save-type-product',[
+    'as'=>'save-type-product',
+    'uses'=>'TypeProduct@save_type_product'
+]);

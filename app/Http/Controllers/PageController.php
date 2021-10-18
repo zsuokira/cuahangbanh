@@ -162,6 +162,8 @@ class PageController extends Controller
     }
     public function postLogout(){
         Auth::logout();
+
+        
          return redirect()->route('trang-chu');
     }
 
