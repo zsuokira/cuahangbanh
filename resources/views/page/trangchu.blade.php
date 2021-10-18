@@ -1,5 +1,5 @@
-@extends('master');
-@section('content');
+@extends('master')
+@section('content')
 
  <div class="fullwidthbanner-container">
                <div class="fullwidthbanner">
@@ -46,7 +46,7 @@
                                              @if($new ->promotion_price != 0)
                                             	<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
                                         </div>
-                                        @endif();
+                                        @endif()
                                             <div class="single-item-header">
                                                 <a href="{{route('chitietsanpham',$new -> id)}}"><img src="source/image/product/{{$new -> image}}" height="250px" alt=""></a>
                                             </div>
