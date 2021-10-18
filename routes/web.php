@@ -70,3 +70,40 @@ Route ::get('search',[
     'as'=>'search',
     'uses'=>'PageController@getSearch'
 ]);
+
+// Admin
+
+Route ::get('admin',[
+    'as'=>'admin',
+    'uses'=>'AdminController@index'
+]);
+
+Route ::get('dashboard',[
+    'as'=>'dashboard',
+    'uses'=>'AdminController@show_dashboard'
+]);
+
+
+Route ::get('logoutAdmin',[
+    'as'=>'logoutAdmin',
+    'uses'=>'AdminController@logoutAdmin'
+]);
+
+Route ::post('dashboard',[
+    'as'=>'dashboard',
+    'uses'=>'AdminController@dashboard'
+]);
+
+
+
+// TypeProduct
+
+Route ::get('add-type-product',[
+    'as'=>'add-type-product',
+    'uses'=>'TypeProduct@add_type_product'
+]);
+
+Route ::get('all-type-product',[
+    'as'=>'all-type-product',
+    'uses'=>'TypeProduct@all_type_product'
+]);
