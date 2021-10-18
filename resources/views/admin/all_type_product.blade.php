@@ -7,7 +7,7 @@
      DANH SÁCH DANH MỤC SẢN PHẨM
     </div>
     <div class="row w3-res-tb">
-      <div class="col-sm-5 m-b-xs">
+      <!-- <div class="col-sm-5 m-b-xs">
         <select class="input-sm form-control w-sm inline v-middle">
           <option value="0">Bulk action</option>
           <option value="1">Delete selected</option>
@@ -15,7 +15,7 @@
           <option value="3">Export</option>
         </select>
         <button class="btn btn-sm btn-default">Apply</button>                
-      </div>
+      </div> -->
       <div class="col-sm-4">
       </div>
       <div class="col-sm-3">
@@ -32,27 +32,28 @@
         <thead>
           <tr>
             <th style="width:20px;">
-              <label class="i-checks m-b-none">
+              <!-- <label class="i-checks m-b-none">
                 <input type="checkbox"><i></i>
-              </label>
+              </label> -->
             </th>
             <th>Tên danh mục</th>
-            <th>Loại</th>
-            <th>Ngày thêm</th>
+            <th>Mô tả</th>
+           
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
+            @foreach($all_type_product as $key => $type_pro)
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-            <td>Idrawfast prototype design prototype design prototype design prototype design prototype design</td>
-            <td><span class="text-ellipsis">{item.PrHelpText1}</span></td>
-            <td><span class="text-ellipsis">{item.PrHelpText1}</span></td>
-            <td>
+            <td style ="width:30%;">{{$type_pro -> name}}</td>
+            <td style ="width:60%;" ><span class="text-ellipsis">{{$type_pro -> description}}</span></td>
+            <td style ="width:10%;" >
               <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i>
               <i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>
+          @endforeach()
         </tbody>
       </table>
     </div>
