@@ -102,10 +102,16 @@ Route ::get('add-type-product',[
     'as'=>'add-type-product',
     'uses'=>'TypeProduct@add_type_product'
 ]);
-Route ::get('update-type-product/{id}',[
+Route ::get('edit-type-product/{id}',[
+    'as'=>'edit-type-product',
+    'uses'=>'TypeProduct@edit_type_product'
+]);
+
+Route ::post('update-type-product/{id}',[
     'as'=>'update-type-product',
     'uses'=>'TypeProduct@update_type_product'
 ]);
+
 Route ::get('delete-type-product/{id}',[
     'as'=>'delete-type-product',
     'uses'=>'TypeProduct@delete_type_product'

@@ -36,9 +36,34 @@ class TypeProduct extends Controller
         Session::put('message','Thêm danh mục sản phẩm thành công');
         return Redirect::to('/add-type-product');   
     }
-    public function update_type_product(Request $req){
-      $update_type_product = DB::table('type_products') -> where('id',$req->id)->get();
-      $manager_type_product = view('admin.update_type_product') ->with('update_type_product',$update_type_product);
-       return view('admin_layout')->with('admin.update_type_product',$manager_type_product);
+    public function edit_type_product($id){
+        $edit_type_product = DB::table('type_products') -> where('id',$id)->get();
+        $manager_type_product = view('admin.edit_type_product') ->with('edit_type_product',$edit_type_product);
+
+         return view('admin_layout')->with('admin.edit_type_product',$manager_type_product);
+    }
+
+    public function update_type_product(Request $request, $id){
+
+      $data = array();
+      $data['name'] = $request -> type_name;  
+      $data['description'] = $request -> type_description;  
+
+      DB::table('type_products')->where('id',$id)->update($data);
+
+      Session::put('message','Cập nhật danh mục sản phẩm thành công');
+      return Redirect::to('/all-type-product'); 
+
+    }
+
+    public function delete_type_product($id){
+
+
+      DB::table('type_products')->where('id',$id)->delete();
+
+      Session::put('message','Xoá danh mục sản phẩm thành công');
+      return Redirect::to('/all-type-product'); 
+
+
     }
 }
