@@ -36,4 +36,9 @@ class TypeProduct extends Controller
         Session::put('message','Thêm danh mục sản phẩm thành công');
         return Redirect::to('/add-type-product');   
     }
+    public function update_type_product(Request $req){
+      $update_type_product = DB::table('type_products') -> where('id',$req->id)->get();
+      $manager_type_product = view('admin.update_type_product') ->with('update_type_product',$update_type_product);
+       return view('admin_layout')->with('admin.update_type_product',$manager_type_product);
+    }
 }
