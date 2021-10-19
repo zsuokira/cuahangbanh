@@ -126,3 +126,12 @@ Route ::post('save-type-product',[
     'as'=>'save-type-product',
     'uses'=>'TypeProduct@save_type_product'
 ]);
+
+//product
+
+
+//hoadon
+Route ::get('hoadon',[
+    'as'=>'hoadon',
+    'uses'=>'HoadonController@getHoaDon'
+]);
