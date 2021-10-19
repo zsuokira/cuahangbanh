@@ -111,20 +111,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </section>
  <!-- footer -->
 		  <div class="footer">
-			<div class="wthree-copyright">
+			<!-- <div class="wthree-copyright">
 			  <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-			</div>
+			</div> -->
 		  </div>
   <!-- / footer -->
 </section>
 <!--main content end-->
 </section>
-<script src="{{{'source/admin/js/bootstrap.js'}}}"></script>
-<script src="{{{'source/admin/js/jquery.dcjqaccordion.2.7.js'}}}"></script>
-<script src="{{{'source/admin/js/scripts.js'}}}"></script>
-<script src="{{{'source/admin/js/jquery.slimscroll.js'}}}"></script>
-<script src="{{{'source/admin/js/jquery.nicescroll.js'}}}"></script>
-<script src="{{{'source/admin/js/jquery.scrollTo.js'}}}"></script>
+<script src="{{asset('source/admin/js/bootstrap.js')}}"></script>
+<script src="{{asset('source/admin/js/jquery.dcjqaccordion.2.7.js')}}"></script>
+<script src="{{asset('source/admin/js/scripts.js')}}"></script>
+<script src="{{asset('source/admin/js/jquery.slimscroll.js')}}"></script>
+<script src="{{asset('source/admin/js/jquery.nicescroll.js')}}"></script>
+<script src="{{asset('source/admin/js/jquery.scrollTo.js')}}"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
 <!-- morris JavaScript -->	
 <script>
