@@ -22,10 +22,10 @@
                                         </div>
                                         @endif();
                                             <div class="single-item-header">
-                                                <a href="{{route('chitietsanpham',$new -> id)}}"><img src="source/image/product/{{$new -> image}}" height="250px" alt=""></a>
+                                                <a href="{{route('chitietsanpham',$new -> id_product)}}"><img src="source/image/product/{{$new -> image}}" height="250px" alt=""></a>
                                             </div>
                                             <div class="single-item-body">
-                                                <p class="single-item-title">{{$new -> name}}</p>
+                                                <p class="single-item-title">{{$new -> product_name}}</p>
                                                 <p class="single-item-price">
                                                 @if($new ->promotion_price == 0)
                                                      <span class="flash-sale">{{number_format($new->unit_price)}}đ</span>
@@ -36,8 +36,8 @@
                                                 </p>
                                             </div>
                                             <div class="single-item-caption">
-                                                <a class="add-to-cart pull-left" href="{{route('themgiohang',$new -> id)}}"><i class="fa fa-shopping-cart"></i></a>
-                                                <a class="beta-btn primary" href="{{route('chitietsanpham',$new -> id)}}">Chi tiết <i class="fa fa-chevron-right"></i></a>
+                                                <a class="add-to-cart pull-left" href="{{route('themgiohang',$new -> id_product)}}"><i class="fa fa-shopping-cart"></i></a>
+                                                <a class="beta-btn primary" href="{{route('chitietsanpham',$new -> id_product)}}">Chi tiết <i class="fa fa-chevron-right"></i></a>
                                                 <div class="clearfix"></div>
                                             </div>
                                         </div>

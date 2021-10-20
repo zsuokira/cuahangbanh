@@ -33,7 +33,7 @@ class PageController extends Controller
     }
 
      public function getChitiet(Request $req){
-         $sanpham = Product :: where('id',$req -> id) ->first();
+         $sanpham = Product :: where('id_product',$req -> id) ->first();
          $sp_tuongtu = Product :: where ('id_type',$sanpham -> id_type)-> paginate(3);
         return view('page.chitiet_sanpham',compact('sanpham','sp_tuongtu'));
     }
@@ -46,11 +46,11 @@ class PageController extends Controller
         return view('page.gioithieu');
     }
 
-    public function getAddtoCart(Request $req,$id){
-        $product = Product::find($id);
+    public function getAddtoCart(Request $req,$id_product){
+        $product = Product::find($id_product);
         $oldCart = Session('cart')?Session::get('cart'):null;
         $cart = new Cart($oldCart);
-        $cart ->add($product, $id);
+        $cart ->add($product, $id_product);
         $req->session()->put('cart',$cart);
         return redirect()->back();
     }
@@ -170,7 +170,7 @@ class PageController extends Controller
     }
 
     public function getSearch(Request $req){
-        $product = Product::where('name','like','%'.$req->key.'%')
+        $product = Product::where('product_name','like','%'.$req->key.'%')
                             ->orWhere('unit_price',$req->key)
                             ->get();
         return view('page.search',compact('product'));

@@ -26,7 +26,7 @@
 						</div>
 						<div class="col-sm-8">
 							<div class="single-item-body">
-								<p class="single-item-title"><h2>{{$sanpham -> name}}</h2></p>
+								<p class="single-item-title"><h2>{{$sanpham -> product_name}}</h2></p>
 								<p class="single-item-price">
 								@if($sanpham ->promotion_price == 0)
                                                      <span class="flash-sale">{{number_format($sanpham->unit_price)}}đ</span>
@@ -46,7 +46,7 @@
 							<p>Đặt mua:</p>
 							<div class="single-item-options">
 								
-								<a class="add-to-cart" href="{{route('themgiohang',$sanpham -> id)}}"><i class="fa fa-shopping-cart"></i></a>
+								<a class="add-to-cart" href="{{route('themgiohang',$sanpham -> id_product)}}"><i class="fa fa-shopping-cart"></i></a>
 								<div class="clearfix"></div>
 							</div>
 						</div>
@@ -60,7 +60,7 @@
 						</ul>
 
 						<div class="panel" id="tab-description">
-							<p>{{$sanpham -> description}}</p>
+							<p>{{$sanpham -> product_description}}</p>
 						</div>
 						
 					</div>
@@ -77,10 +77,10 @@
                                         </div>
                                         @endif();
 									<div class="single-item-header">
-										<a href="{{route('chitietsanpham',$sptt -> id)}}"><img src="source/image/product/{{$sptt -> image}}" alt="" height="200px"></a>
+										<a href="{{route('chitietsanpham',$sptt -> id_product)}}"><img src="source/image/product/{{$sptt -> image}}" alt="" height="200px"></a>
 									</div>
 									<div class="single-item-body">
-										<p class="single-item-title">{{$sptt -> name}}</p>
+										<p class="single-item-title">{{$sptt -> product_name}}</p>
 										<p class="single-item-price">
 										@if($sptt->promotion_price != 0)
 											<span class="flash-del">{{number_format($sptt->unit_price)}}đ</span>
@@ -91,8 +91,8 @@
 										</p>
 									</div>
 									<div class="single-item-caption">
-										<a class="add-to-cart pull-left" href="{{route('themgiohang',$sptt -> id)}}"><i class="fa fa-shopping-cart"></i></a>
-										<a class="beta-btn primary" href="{{route('chitietsanpham',$sptt -> id)}}">Details <i class="fa fa-chevron-right"></i></a>
+										<a class="add-to-cart pull-left" href="{{route('themgiohang',$sptt -> id_product)}}"><i class="fa fa-shopping-cart"></i></a>
+										<a class="beta-btn primary" href="{{route('chitietsanpham',$sptt -> id_product)}}">Details <i class="fa fa-chevron-right"></i></a>
 										<div class="clearfix"></div>
 									</div>
 								</div>

@@ -21,13 +21,13 @@
 					<div class="col-sm-3">
 						<ul class="aside-menu">
 							@foreach($loai as $l)
-							<li><a href="{{route('loaisanpham',$l -> id)}}">{{$l -> name}}</a></li>
+							<li><a href="{{route('loaisanpham',$l -> id)}}">{{$l -> type_name}}</a></li>
 							@endforeach
 						</ul>
 					</div>
 					<div class="col-sm-9">
 						<div class="beta-products-list">
-							<h4>{{$loai_sp -> name}}</h4>
+							<h4>{{$loai_sp -> type_name}}</h4>
 							<div class="beta-products-details">
 								<p class="pull-left">Panna Cotta - Tiệm Bánh Handmade</p>
 								<div class="clearfix"></div>
@@ -42,10 +42,10 @@
                                         </div>
                                         @endif()
 										<div class="single-item-header">
-											<a href="{{route('chitietsanpham',$sp -> id)}}"><img src="source/image/product/{{$sp -> image}}" alt="" height="250px"></a>
+											<a href="{{route('chitietsanpham',$sp -> id_product)}}"><img src="source/image/product/{{$sp -> image}}" alt="" height="250px"></a>
 										</div>
 										<div class="single-item-body">
-											<p class="single-item-title">{{$sp -> name}}</p>
+											<p class="single-item-title">{{$sp -> product_name}}</p>
 											<p class="single-item-price">
 												@if($sp->promotion_price != 0)
 											<span class="flash-del">{{number_format($sp->unit_price)}}đ</span>
@@ -56,8 +56,8 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="{{route('themgiohang',$sp -> id)}}"><i class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{route('chitietsanpham',$sp -> id)}}">Details <i class="fa fa-chevron-right"></i></a>
+											<a class="add-to-cart pull-left" href="{{route('themgiohang',$sp -> id_product)}}"><i class="fa fa-shopping-cart"></i></a>
+											<a class="beta-btn primary" href="{{route('chitietsanpham',$sp -> id_product)}}">Details <i class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
 									</div>
@@ -83,10 +83,10 @@
                                         </div>
                                         @endif()
 										<div class="single-item-header">
-											<a href="{{route('chitietsanpham',$spk -> id)}}"><img src="source/image/product/{{$spk -> image}}" alt="" height="250px"></a>
+											<a href="{{route('chitietsanpham',$spk -> id_product)}}"><img src="source/image/product/{{$spk -> image}}" alt="" height="250px"></a>
 										</div>
 										<div class="single-item-body">
-											<p class="single-item-title">{{$spk -> name}}</p>
+											<p class="single-item-title">{{$spk -> product_name}}</p>
 											<p class="single-item-price">
 												@if($spk->promotion_price != 0)
 											<span class="flash-del">{{number_format($spk->unit_price)}}đ</span>
@@ -97,8 +97,8 @@
 											</p>
 										</div>
 										<div class="single-item-caption">
-											<a class="add-to-cart pull-left" href="{{route('themgiohang',$spk -> id)}}"><i class="fa fa-shopping-cart"></i></a>
-											<a class="beta-btn primary" href="{{route('chitietsanpham',$spk -> id)}}">Details <i class="fa fa-chevron-right"></i></a>
+											<a class="add-to-cart pull-left" href="{{route('themgiohang',$spk -> id_product)}}"><i class="fa fa-shopping-cart"></i></a>
+											<a class="beta-btn primary" href="{{route('chitietsanpham',$spk -> id_product)}}">Details <i class="fa fa-chevron-right"></i></a>
 											<div class="clearfix"></div>
 										</div>
 									</div>

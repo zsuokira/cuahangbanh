@@ -16,49 +16,50 @@
                                     }
                                 ?>
                             <div class="position-center">
-                                <form role="form" action ="{{route('save-product')}}" method="post" enctype="multipart/form-data">
+                                @foreach($edit_product as $edit )
+                                <form role="form" action ="{{route('update-product',$edit->id_product)}}" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Tên Sản Phẩm</label>
 
-                                    <input type="text" name="product_name" class="form-control" id="exampleInputEmail1" placeholder="Tên sản phẩm">
+                                    <input type="text" name="product_name" class="form-control" id="exampleInputEmail1" value="{{$edit->product_name}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Loại Sản Phẩm</label>
                                     <select name = "type_product" class="form-control input-sm m-bot15">
-                                        @foreach($type_products as $type)
-                                        <option value = "{{$type -> id}}">{{$type -> type_name}} </option>   
-                                        @endforeach                                     
+                                       
+                                        <option value = "{{$edit -> id}}">{{$edit->type_name}} </option>   
+                                                                         
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Mô tả Sản phẩm</label>
-                                    <textarea class="form-control " id="ccomment" name="product_description" required=""></textarea>
+                                    <textarea class="form-control " value="{{$edit->product_description}}" id="ccomment" name="product_description" required=""></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Giá Bán</label>
 
                                     <input type="text" name="product_price" class="form-control" id="exampleInputEmail1"
-                                     placeholder="Giá Bán">
+                                    value="{{$edit->unit_price}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Giá Khuyến Mãi</label>
 
                                     <input type="text" name="product_promotion_price" class="form-control" 
-                                    id="exampleInputEmail1" placeholder="Giá Khuyến Mãi">
+                                    id="exampleInputEmail1" value="{{$edit->promotion_price}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Hình ảnh</label>
 
                                     <input type="file" name="product_image" class="form-control" 
-                                    id="exampleInputEmail1" placeholder="Hình Ảnh">
+                                    id="exampleInputEmail1">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Đơn vị</label>
 
                                     <input type="text" name="product_unit" class="form-control" 
-                                    id="exampleInputEmail1" placeholder="Đơn vị">
+                                    id="exampleInputEmail1" value="{{$edit->unit}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Sản Phẩm Mới</label>
@@ -71,7 +72,7 @@
                                 <button name = "add_product" type="submit" class="btn btn-info">Thêm sản phẩm</button>
                             </form>
                             </div>
-
+                                        @endforeach
                         </div>
                     </section>
 

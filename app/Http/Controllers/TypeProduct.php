@@ -29,7 +29,7 @@ class TypeProduct extends Controller
 
       public function save_type_product(Request $request){
         $data = array();
-        $data['name'] = $request -> type_name;  
+        $data['type_name'] = $request -> type_name;  
         $data['description'] = $request -> type_description;  
 
         DB::table('type_products')->insert($data);
@@ -46,7 +46,7 @@ class TypeProduct extends Controller
     public function update_type_product(Request $request, $id){
 
       $data = array();
-      $data['name'] = $request -> type_name;  
+      $data['type_name'] = $request -> type_name;  
       $data['description'] = $request -> type_description;  
 
       DB::table('type_products')->where('id',$id)->update($data);

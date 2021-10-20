@@ -129,6 +129,34 @@ Route ::post('save-type-product',[
 
 //product
 
+Route ::get('add-product',[
+    'as'=>'add-product',
+    'uses'=>'ProductController@add_product'
+]);
+Route ::get('edit-product/{id}',[
+    'as'=>'edit-product',
+    'uses'=>'ProductController@edit_product'
+]);
+
+Route ::post('update-product/{id}',[
+    'as'=>'update-product',
+    'uses'=>'ProductController@update_product'
+]);
+
+Route ::get('delete-product/{id}',[
+    'as'=>'delete-product',
+    'uses'=>'ProductController@delete_product'
+]);
+
+Route ::get('all-product',[
+    'as'=>'all-product',
+    'uses'=>'ProductController@all_product'
+]);
+
+Route ::post('save-product',[
+    'as'=>'save-product',
+    'uses'=>'ProductController@save_product'
+]);
 
 //hoadon
 Route ::get('hoadon',[
