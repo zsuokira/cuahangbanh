@@ -43,7 +43,7 @@
 								
 								@foreach($product_cart as $product)
 								<div class="cart-item">
-									<a class="cart-item-delete" href="{{route('xoagiohang',$product['item']['id'])}}"><i class="fa fa-times"></i></a>
+									<a class="cart-item-delete" href="{{route('xoagiohang',$product['item']['id_product'])}}"><i class="fa fa-times"></i></a>
 									<div class="media">
 										<a class="pull-left" href="#"><img src="source/image/product/{{$product['item']['image']}}" alt=""></a>
 										<div class="media-body">

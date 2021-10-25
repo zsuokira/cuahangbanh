@@ -55,10 +55,10 @@ class PageController extends Controller
         return redirect()->back();
     }
 
-    public function getDelItemCart($id){
+    public function getDelItemCart($id_product){
         $oldCart = Session::has('cart')?Session::get('cart'):null;
         $cart = new Cart($oldCart); 
-        $cart->removeItem($id);
+        $cart->removeItem($id_product);
         if(count($cart->items)>0){
             Session::put('cart', $cart);
         }
