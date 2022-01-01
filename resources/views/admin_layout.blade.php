@@ -55,7 +55,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<?php
 						$name = Session::get('admin_name');
 						if ($name) {
-							# code...
 							echo $name;
 						}
 					?>	
@@ -69,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
         </li>
         <!-- user login dropdown end -->
-       
+
     </ul>
     <!--search & user info end-->
 </div>
@@ -83,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
                     <a class="active" href="{{route('dashboard')}}">
-                        <i class="fa fa-dashboard"></i>
+                      <i class="fa fa-dashboard"></i>
                         <span>Tổng quan</span>
                     </a>
                 </li>
@@ -116,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </li>
 				
             </ul>           
-         </div>
+        </div>
         <!-- sidebar menu end-->
     </div>
 </aside>
@@ -127,7 +126,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		@yield('admin_content')
 		
     </section>
- <!-- footer -->
+<!-- footer -->
 		  <div class="footer">
 			<!-- <div class="wthree-copyright">
 			  <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>

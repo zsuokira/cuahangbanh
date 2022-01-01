@@ -5,11 +5,11 @@
             <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                          THÊM DANH MỤC SẢN PHẨM
+                        THÊM DANH MỤC SẢN PHẨM
                         </header>
                         <div class="panel-body">
                             @foreach($update_type_product as $update)
-                            	<?php
+                            <?php
                                     $message = Session::get('message');
                                     if ($message) {
                                         # code...

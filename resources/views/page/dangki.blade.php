@@ -48,13 +48,13 @@
 
 						<div class="form-block">
 							<label for="adress">Địa chỉ</label>
-							<input type="text" name="adress" required>
+							<input type="text" name="address" required>
 						</div>
 
 
 						<div class="form-block">
-							<label for="phone">Số điện thoại</label>
-							<input type="text" name="phone" required>
+						<label for="phone">Số điện thoại</label>
+						<input type="text" name="phone" required>
 						</div>
 						<div class="form-block">
 							<label for="password">Mật khẩu</label>

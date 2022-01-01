@@ -17,7 +17,7 @@
                     </div>
                   </div>
                 </div>
-                                 <?php
+                                <?php
                                     $message = Session::get('message');
                                     if ($message) {
                                         # code...

@@ -79,7 +79,7 @@
 								<div class="col-sm-4">
 									<div class="single-item">
 									@if($spk ->promotion_price != 0)
-                                            	<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
+                  <div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
                                         </div>
                                         @endif()
 										<div class="single-item-header">

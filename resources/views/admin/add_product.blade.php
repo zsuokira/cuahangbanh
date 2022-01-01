@@ -4,10 +4,10 @@
             <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                          THÊM SẢN PHẨM
+                        THÊM SẢN PHẨM
                         </header>
                         <div class="panel-body">
-                            	<?php
+                            <?php
                                     $message = Session::get('message');
                                     if ($message) {
                                         # code...
@@ -38,8 +38,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Giá Bán</label>
 
-                                    <input type="text" name="product_price" class="form-control" id="exampleInputEmail1"
-                                     placeholder="Giá Bán">
+                                    <input type="text" name="product_price" class="form-control" id="exampleInputEmail1" placeholder="Giá Bán">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Giá Khuyến Mãi</label>
@@ -67,7 +66,6 @@
                                         <option value ="1">Mới</option>                                       
                                     </select>
                                 </div>
-                               
                                 <button name = "add_product" type="submit" class="btn btn-info">Thêm sản phẩm</button>
                             </form>
                             </div>

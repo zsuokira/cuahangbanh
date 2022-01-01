@@ -20,7 +20,7 @@
                   </div>
                 </div>
 
-                                 <?php
+                                <?php
                                     $message = Session::get('message');
                                     if ($message) {
                                         # code...
@@ -33,7 +33,7 @@
         <thead>
           <tr>
             <th style="width:20px;">
-             
+
             </th>
             <th>Tên danh mục</th>
             <th>Loại Sản Phẩm</th>

@@ -9,7 +9,7 @@
 				</div>
 				
 				<div class="col-sm-4">
-				 <div class="col-sm-10">
+					<div class="col-sm-10">
 					<div class="widget">
 						<h4 class="widget-title">Liên hệ chúng tôi</h4>
 						<div>
@@ -20,7 +20,7 @@
 							</div>
 						</div>
 					</div>
-				  </div>
+				</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="widget">

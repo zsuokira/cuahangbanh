@@ -31,12 +31,13 @@ class AdminController extends Controller
    }
 
     public function dashboard(Request $request){
+
         $admin_email = $request->admin_email;
         $admin_password = md5($request->admin_password);
 
         $result = DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
 
-        print_r($result);
+        // print_r($result);
 
        if($result){
         Session::put('admin_name',$result->admin_name);
@@ -44,7 +45,7 @@ class AdminController extends Controller
 
         return Redirect::to('/dashboard');   
        }
-       else {
+       else { 
 
         Session::put('message','Tài khoản hoặc mật khẩu không chính xác.Yêu cầu nhập lại!!!');
 

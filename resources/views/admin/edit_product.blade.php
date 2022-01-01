@@ -3,11 +3,10 @@
  <div class="row">
             <div class="col-lg-12">
                     <section class="panel">
-                        <header class="panel-heading">
-                          THÊM SẢN PHẨM
+                        <header class="panel-heading"> THÊM SẢN PHẨM
                         </header>
                         <div class="panel-body">
-                            	<?php
+                            <?php
                                     $message = Session::get('message');
                                     if ($message) {
                                         # code...
@@ -27,9 +26,9 @@
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Loại Sản Phẩm</label>
                                     <select name = "type_product" class="form-control input-sm m-bot15">
-                                       
+
                                         <option value = "{{$edit -> id}}">{{$edit->type_name}} </option>   
-                                                                         
+
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -68,7 +67,7 @@
                                         <option value ="1">Mới</option>                                       
                                     </select>
                                 </div>
-                               
+
                                 <button name = "add_product" type="submit" class="btn btn-info">Thêm sản phẩm</button>
                             </form>
                             </div>

@@ -41,7 +41,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     
 		<form action="{{route('dashboard')}}" method="post">
             {{csrf_field()}}
-
 			<input autocomplete="off" type="text" class="ggg" name="admin_email" placeholder="E-MAIL" required="" >
 			<input autocomplete="nope" type="password" class="ggg" name="admin_password" placeholder="Điền password " required="" >
 			<span><input type="checkbox" />Ghi nhớ</span>
@@ -49,8 +48,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"></div>
 				<input type="submit" value="Đăng nhập" name="login">
 		</form>
-		<!-- <p>Bạn chưa có tài khoản ?<a href="registration.html">Tạo tài khoản</a></p> -->
-		
 </div>
 </div>
 <script src="{{asset('source/admin/js/bootstrap.js')}}"></script>

@@ -8,7 +8,7 @@
                         CẬP NHẬT DANH MỤC SẢN PHẨM
                         </header>
                         <div class="panel-body">
-                            	<?php
+                            <?php
                                     $message = Session::get('message');
                                     if ($message) {
                                         # code...

@@ -17,8 +17,8 @@
                                     @foreach($product as $new)
                                     <div class="col-sm-3">
                                         <div class="single-item">
-                                             @if($new ->promotion_price != 0)
-                                            	<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
+                                            @if($new ->promotion_price != 0)
+                                            <div class="ribbon-wrapper"><div class="ribbon sale">Sale</div>
                                         </div>
                                         @endif();
                                             <div class="single-item-header">
@@ -28,7 +28,7 @@
                                                 <p class="single-item-title">{{$new -> product_name}}</p>
                                                 <p class="single-item-price">
                                                 @if($new ->promotion_price == 0)
-                                                     <span class="flash-sale">{{number_format($new->unit_price)}}đ</span>
+                                                    <span class="flash-sale">{{number_format($new->unit_price)}}đ</span>
                                                 @else
                                                 <span class="flash-del">{{number_format($new->unit_price)}}đ</span>
 												<span class="flash-sale">{{number_format($new->promotion_price)}}đ</span>
@@ -42,12 +42,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                   @endforeach
+                                @endforeach
                                 </div>
 
                             </div> <!-- .beta-products-list -->
 
-  
+
                         </div>
                     </div> <!-- end section with sidebar and main content -->
                 </div> <!-- .main-content -->

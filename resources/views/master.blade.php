@@ -21,7 +21,7 @@
 
 	@include('header');
 	<div class="rev-slider">
-       @yield('content')
+      @yield('content')
     </div>     
     @include('footer');
 

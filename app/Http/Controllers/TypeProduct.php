@@ -23,12 +23,12 @@ class TypeProduct extends Controller
         $all_type_product = DB::table('type_products') -> get();
         $manager_type_product = view('admin.all_type_product') ->with('all_type_product',$all_type_product);
 
-         return view('admin_layout')->with('admin.all_type_product',$manager_type_product);
-        
+        return view('admin_layout')->with('admin.all_type_product',$manager_type_product);
+
     }
 
       public function save_type_product(Request $request){
-        $data = array();
+        $data = array();  // 
         $data['type_name'] = $request -> type_name;  
         $data['description'] = $request -> type_description;  
 
@@ -36,11 +36,12 @@ class TypeProduct extends Controller
         Session::put('message','Thêm danh mục sản phẩm thành công');
         return Redirect::to('/add-type-product');   
     }
+
     public function edit_type_product($id){
         $edit_type_product = DB::table('type_products') -> where('id',$id)->get();
         $manager_type_product = view('admin.edit_type_product') ->with('edit_type_product',$edit_type_product);
 
-         return view('admin_layout')->with('admin.edit_type_product',$manager_type_product);
+      return view('admin_layout')->with('admin.edit_type_product',$manager_type_product);
     }
 
     public function update_type_product(Request $request, $id){

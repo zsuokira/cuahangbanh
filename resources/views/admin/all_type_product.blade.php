@@ -20,12 +20,12 @@
                   </div>
                 </div>
 
-                                 <?php
+                                  <?php
                                     $message = Session::get('message');
                                     if ($message) {
-                                        # code...
-                                        echo $message;
-                                        Session::put('message'.null);
+                                      # code...
+                                      echo $message;
+                                    Session::put('message'.null);
                                     }
                                 ?>
     <div class="table-responsive">
@@ -33,11 +33,11 @@
         <thead>
           <tr>
             <th style="width:20px;">
-             
+
             </th>
             <th>Tên danh mục</th>
             <th>Mô tả</th>
-           
+
             <th style="width:30px;"></th>
           </tr>
         </thead>
@@ -61,7 +61,7 @@
       </table>
     </div>
     <footer class="panel-footer">
-     
+
     </footer>
   </div>
 </div>
